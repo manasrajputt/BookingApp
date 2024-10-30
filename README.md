@@ -17,6 +17,7 @@ BookingApp is a full-stack web application built with the MERN (MongoDB, Express
 - Express.js
 - MongoDB
 - Mongoose
+- Cloudinary
 - JSON Web Tokens (JWT) for authentication
 
 ### Frontend
