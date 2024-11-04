@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 const PropertyList = () => {
   const { data, loading, error } = useFetch(
-    "http://localhost:8800/api/hotels/countByType"
+    "https://bookingapp-backend-su6r.onrender.com/api/hotels/countByType"
   );
 
   return (

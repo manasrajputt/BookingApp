@@ -42,7 +42,7 @@ const Register = () => {
     formData.append("image", credentials.image); // Attach the file with key "image"
     try {
       const res = await axios.post(
-        "http://localhost:8800/api/auth/register",
+        "https://bookingapp-backend-su6r.onrender.com/api/auth/register",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
