@@ -10,6 +10,8 @@ BookingApp is a full-stack web application built with the MERN (MongoDB, Express
 - **Hotel Details**: Users can view detailed information about a specific hotel, including descriptions, images, availability etc.
 - **Room Reservation**: Users can select available rooms and make reservations for their desired dates.
 
+## Live Url - https://bookingapp-frontend-wbg6.onrender.com
+
 ## Technologies Used
 
 ### Backend
