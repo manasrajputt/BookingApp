@@ -7,7 +7,6 @@ const Navbar = () => {
   const { user, dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  console.log(user);
   const handleClick = () => {
     dispatch({ type: "LOGOUT" });
     navigate("/");
@@ -27,7 +26,7 @@ const Navbar = () => {
                   height: "35px",
                   overflow: "hidden",
                   borderRadius: "50%",
-                  marginTop:"6px"
+                  marginTop: "6px",
                 }}
               >
                 <img
@@ -37,8 +36,7 @@ const Navbar = () => {
                 />
               </div>
             )}
-                        {user.username}
-
+            <Link to="/profile" style={{textDecoration:"none", color:"white"}}>{user.username}</Link>
             <button className="navButton" onClick={handleClick}>
               logout
             </button>
