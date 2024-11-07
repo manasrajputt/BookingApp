@@ -32,7 +32,12 @@ mongoose.connection.on("disconnected", () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.frontendHostedUrl, // Your frontend URL
+    credentials: true,
+  })
+);
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);

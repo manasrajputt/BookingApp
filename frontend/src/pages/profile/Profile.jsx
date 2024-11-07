@@ -5,7 +5,7 @@ import "./profile.css";
 import axios from "axios";
 
 function Profile() {
-  const { user, loading, error } = useContext(AuthContext);
+  const { user, dispatch, loading, error } = useContext(AuthContext);
   const id = user._id;
   const [credentials, setCredentials] = useState({
     username: user.username || "",
@@ -25,11 +25,12 @@ function Profile() {
     try {
       const res = await axios.put(
         `https://bookingapp-backend-su6r.onrender.com/api/users/${id}`,
-        credentials
+        credentials,
+        { withCredentials: true }
       );
 
-      console.log("res------------->", res);
-      navigate("/");
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      alert("Profile Updated");
     } catch (err) {
       console.log(err.response.data);
     }

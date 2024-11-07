@@ -25,7 +25,8 @@ const Login = () => {
     try {
       const res = await axios.post(
         "https://bookingapp-backend-su6r.onrender.com/api/auth/login",
-        credentials
+        credentials,
+        { withCredentials: true }
       );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/");

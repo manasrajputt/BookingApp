@@ -2,12 +2,11 @@ import User from "../models/User.js";
 
 export const updateUser = async (req, res, next) => {
   try {
-    console.log(req.params.id)
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
       { $set: req.body },
       { new: true }
-    );
+    ).select("-password -img");
 
     res.status(200).json(updatedUser);
   } catch (err) {
