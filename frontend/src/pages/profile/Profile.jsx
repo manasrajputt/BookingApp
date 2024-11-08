@@ -35,7 +35,7 @@ function Profile() {
       console.log(err.response.data);
     }
   };
-  console.log(id);
+  
   return (
     <>
       <Navbar />
