@@ -6,7 +6,7 @@ export const updateUser = async (req, res, next) => {
       req.params.id,
       { $set: req.body },
       { new: true }
-    ).select("-password -img");
+    ).select("-password");
 
     res.status(200).json(updatedUser);
   } catch (err) {
