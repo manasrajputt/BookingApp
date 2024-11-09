@@ -70,7 +70,7 @@ export const login = async (req, res, next) => {
         httpOnly: true,
         secure: true,
         maxAge: 24 * 60 * 60 * 1000,
-        sameSite: "None",
+        // sameSite: "None",
       })
       .status(200)
       .json({ details: { ...otherDetails }, isAdmin });
